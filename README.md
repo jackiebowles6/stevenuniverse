@@ -14,4 +14,4 @@ Module 4 :
   Pulling files and running code on them
  
 Module 5:
-  Wizard Game 
+  Wizard Game (need to use wizard items with game)
