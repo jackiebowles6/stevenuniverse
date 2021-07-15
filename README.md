@@ -1,4 +1,10 @@
 # stevenuniverse
+sql projects
+SQL searches
+  quick search codes
+
+COVID data
+
 python projects
 
 Module 1:
