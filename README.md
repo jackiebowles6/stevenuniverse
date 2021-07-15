@@ -7,6 +7,8 @@ SQL searches
 
 COVID data
 
+
+
 python projects
 
 Module 1:
