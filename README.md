@@ -1,15 +1,16 @@
 # stevenuniverse
 
-sql projects
+- sql projects -
 
 SQL searches
   quick search codes
 
-COVID data
+COVID Data Project
+---------------------------------
+---------------------------------
+---------------------------------
 
-
-
-python projects
+- python projects -
 
 Module 1:
   Birthday Calculator
