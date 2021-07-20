@@ -1,4 +1,3 @@
-# stevenuniverse
 
 # sql projects 
 
