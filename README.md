@@ -1,6 +1,6 @@
 # stevenuniverse
 
-- sql projects 
+# sql projects 
 
 SQL searches
   quick search codes
@@ -9,20 +9,3 @@ COVID Data Project
 
 
 ---------------------------------
-
-- python projects 
-
-Module 1:
-  Birthday Calculator
- 
-Module 2:
-  Contact List Manager
- 
-Module 3:
-  Sentence Word Counter
-
-Module 4 :
-  Pulling files and running code on them
- 
-Module 5:
-  Wizard Game (need to use wizard items with game)
