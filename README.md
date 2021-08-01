@@ -2,7 +2,8 @@
 # sql projects 
 
 SQL searches
-  quick search codes
+  quick set up codes
+  functions/strings
 
 COVID Data Project
 
