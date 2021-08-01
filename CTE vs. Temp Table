@@ -56,6 +56,8 @@ MORE ADVANCED TEMP TABLES
 
 */
 
+DROP TABLE IF EXISTS #temp_Employee2
+
 CREATE TABLE #temp_Employee2 (
 JobTitle varchar(50),
 EmployeesPerJob int,
