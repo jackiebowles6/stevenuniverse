@@ -1,0 +1,72 @@
+/* 
+Today's Topic: CTE
+*/
+--Common Temporary Expressions: temporary result set, thats used to manipulate a complex subquery data. Only created in memory and not being saved anywhere, instead of a temp table.
+-- also called 'with' queries
+
+WITH CTE_employy as 
+(SELECT FirstName, LastName, Gender, Salary
+, COUNT(gender) OVER (PARTITION by Gender) as TotalGender
+, AVG(Salary) OVER (PARTITION BY Gender) as AvgSalary
+FROM SQLTutorial...EmployeeDemographics emp
+JOIN SQLTutorial...EmployeeSalary sal
+	on emp.EmployeeID = sal.EmployeeID
+WHERE Salary > '45000'
+)
+SELECT *
+FROM CTE_Employee
+
+
+
+
+/* 
+Temp Tables
+*/
+-- can make it multiple times in a query
+
+CREATE TABLE #temp_Employee (
+EmployeeIS int,
+JobTitle varchar(100),
+Salary int,
+)
+
+SELECT * 
+FROM #temp_Employee
+
+-- now its completely empty, and now you can insert info in
+
+INSERT INTO #temp_EMployee VALUES (
+'1001', 'HR', '45000'
+)
+
+-- SELECTing all the data from certain tables
+
+SELECT INTO #temp_Employee
+SELECT *
+FROM SQLTutorial..EmployeeSalary
+
+
+
+
+
+
+/* 
+
+MORE ADVANCED TEMP TABLES
+
+*/
+
+CREATE TABLE #temp_Employee2 (
+JobTitle varchar(50),
+EmployeesPerJob int,
+AvgAge int,
+AvgSalary int
+)
+
+INSERT INTO #temp_Employee2
+SELECT JobTitle, COUNT(JobTitle), AVG(age), AVG(salary)
+FROM SQLTutorial...EmployeeDemographics emp
+JOIN SQLTutorial..EmployeeSalary sal
+	ON emp.EMployeeID = sal.EmployeeID
+GROUP BY JobTitle
+
