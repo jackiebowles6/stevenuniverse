@@ -7,3 +7,53 @@ ON s.id = a.sales_rep_id
 GROUP BY s.id, s.name
 HAVING COUNT(*) > 5
 ORDER BY num_accounts;
+
+
+/*
+
+String FUNCTIONS - TRIM, LTRIM, RTRIM, Replace, Substring, Upper, Lower
+
+*/
+
+CREATE TABLE EmployeeErrors (
+EmployeeID varchar(50)
+, FirstName varchar(50)
+, LastName varchar(50)
+)
+
+INSERT INTO EmployeeErrors VALUES
+('1001','Jimbo','Halbert')
+, (' 1002 ','Pamela','Beaseley')
+, ('1005', 'T0by','Flenderson - Fired')
+
+SELECT *
+FROM EmployeeErrors
+
+-- Using TRIM, LTRIM, RTRIM
+
+SELECT EmployeeID, TRIM(EmployeeID) as IDTRIM
+FROM EmployeeErrors
+
+SELECT EmployeeID, LTRIM(EMployeeID) as IDTRIM
+FROM EmployeeErrors
+
+SELECT EmployeeID, RTRIM(EMployeeID) as IDTRIM
+FROM EmployeeErrors
+
+-- Using Replace
+
+SELECT LastName, REPLACE(LastName, '- Fired', '') as LastNameFixed
+FROM EmployeeErrors
+
+-- Using Substring
+--takes the firstname, and takes the first character and goes over 3 places
+SELECT SUBSTRING(FirstName,1,3)
+FROM EmployeeErrors
+
+
+--Using Upper and Lower
+SELECT FirstName, LOWER(FirstName)
+FROM EmployeeErrors
+
+SELECT FirstName, UPPER(FirstName)
+FROM EmployeeErrors
