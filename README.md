@@ -6,5 +6,6 @@ SQL searches
 
 COVID Data Project
 
+CTE notes
 
 ---------------------------------
