@@ -57,3 +57,37 @@ FROM EmployeeErrors
 
 SELECT FirstName, UPPER(FirstName)
 FROM EmployeeErrors
+
+
+
+
+
+
+
+/*
+
+CASE STATEMENTS
+
+*/
+--keep in mind that it goes from first statement to last. If the first statement is met, it goes to end and doesnt look at other statements
+SELECT FirstName, LastName, Age
+CASE
+	WHEN Age > 30 THEN 'Old'
+	WHEN Age BETWEEN 27 and 30 THEN 'Young'
+	ELSE 'Baby'
+END
+FROM SQLTutorial.dbo.EmployeeDemographics
+WHERE Age is NOT null
+ORDER BY Age
+
+SELECT FirstName, LastName, JobTitle, Salary
+CASE
+	WHEN JobTitle = 'Salesmen' THEN Salary + (Salary * .10)
+	WHEN JobTitle = 'Accountant' THEN Salary + (Salary *0.0)
+	WHEN JobTitle = 'HR' THEN Salary + (Salary *0.00001)
+	ELSE Salary + (Salary * 0.03)
+END AS SalaryAfterRaise
+FROM SQLTutorial.dbo.EmployeeDemographics ed
+JOIN SQLTutorial.dbo.EmployeeSalary es
+	ON ed.employeeID = es.EmployeeID
+
